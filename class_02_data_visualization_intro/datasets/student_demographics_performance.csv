@@ -1,0 +1,251 @@
+student_id,major,gender,state_region,study_hours_weekly,attendance_rate,midterm_score,final_score,grade,daily_sleep_hrs,daily_classes_hrs,daily_study_hrs,daily_leisure_hrs,daily_commute_hrs
+STU_2001,Data Science,Female,Karnataka,22.9,65.0,94.3,77.0,B,7.1,5.3,3.3,6.5,1.8
+STU_2002,Electrical Eng,Female,Maharashtra,26.9,78.3,81.9,84.5,B,6.9,5.9,3.8,5.9,1.5
+STU_2003,Data Science,Female,Karnataka,24.2,75.5,79.8,79.3,B,7.8,5.1,3.5,6.1,1.5
+STU_2004,Computer Science,Male,Tamil Nadu,13.7,77.8,76.6,69.8,C,7.2,5.3,2.0,7.9,1.6
+STU_2005,Computer Science,Male,Karnataka,26.0,98.9,85.9,78.7,B,5.8,4.6,3.7,8.3,1.6
+STU_2006,Electrical Eng,Other/Prefer not to say,Kerala,11.6,71.2,70.7,69.8,C,7.6,5.4,1.7,7.9,1.4
+STU_2007,Mechanical Eng,Female,Tamil Nadu,30.4,84.2,85.2,75.1,B,7.9,5.3,4.3,4.2,2.3
+STU_2008,Electrical Eng,Female,Kerala,26.3,95.5,78.4,85.8,A,7.0,5.6,3.8,7.0,0.6
+STU_2009,Electrical Eng,Male,Kerala,26.4,72.7,82.3,82.7,B,8.3,6.2,3.8,4.1,1.6
+STU_2010,Data Science,Male,Maharashtra,24.3,58.1,79.7,81.3,B,6.5,6.4,3.5,5.9,1.7
+STU_2011,Electrical Eng,Male,Kerala,30.2,75.7,84.5,84.9,B,7.4,5.2,4.3,4.6,2.5
+STU_2012,Computer Science,Male,Tamil Nadu,17.5,91.7,80.5,79.5,B,8.8,4.8,2.5,7.3,0.6
+STU_2013,Electrical Eng,Male,Karnataka,12.1,58.9,58.8,61.6,D,7.6,4.7,1.7,7.7,2.3
+STU_2014,Data Science,Male,Karnataka,20.3,74.2,76.7,81.2,B,7.9,4.6,2.9,6.9,1.7
+STU_2015,Mechanical Eng,Male,Tamil Nadu,12.6,43.7,67.7,64.1,D,4.2,5.3,1.8,10.8,1.9
+STU_2016,Computer Science,Female,Kerala,17.1,95.7,77.8,75.2,B,7.1,5.1,2.4,7.4,2.0
+STU_2017,Mechanical Eng,Female,Karnataka,9.4,88.3,76.5,70.9,C,7.3,5.5,1.3,7.5,2.4
+STU_2018,Electrical Eng,Other/Prefer not to say,Kerala,27.7,75.5,90.9,84.6,B,8.4,5.2,4.0,4.8,1.6
+STU_2019,Electrical Eng,Female,Kerala,9.3,89.6,76.3,80.8,B,6.8,5.9,1.3,7.7,2.3
+STU_2020,Data Science,Female,Tamil Nadu,6.9,90.4,73.7,65.7,C,6.8,6.1,1.0,7.7,2.4
+STU_2021,Business Analytics,Male,Kerala,14.4,77.8,82.8,74.0,C,6.8,5.8,2.1,8.1,1.2
+STU_2022,Computer Science,Male,Karnataka,11.3,83.9,80.9,72.6,C,6.6,6.2,1.6,8.3,1.3
+STU_2023,Computer Science,Male,Maharashtra,10.8,85.3,86.5,76.7,B,7.5,5.4,1.5,7.1,2.5
+STU_2024,Computer Science,Male,Kerala,11.5,93.5,88.5,70.6,C,6.5,5.8,1.6,8.0,2.1
+STU_2025,Computer Science,Male,Delhi,26.2,97.7,79.7,80.7,B,8.9,5.3,3.7,4.6,1.5
+STU_2026,Business Analytics,Female,Tamil Nadu,11.2,78.7,62.4,70.8,C,6.5,5.4,1.6,7.8,2.7
+STU_2027,Computer Science,Male,Maharashtra,31.8,87.2,91.0,93.6,A,7.7,5.3,4.5,4.5,2.0
+STU_2028,Electrical Eng,Female,Kerala,27.1,92.3,94.7,84.1,B,7.8,5.7,3.9,5.1,1.5
+STU_2029,Electrical Eng,Female,Kerala,21.2,91.4,97.0,83.4,B,7.9,5.7,3.0,5.6,1.8
+STU_2030,Data Science,Male,Maharashtra,28.4,89.4,80.0,77.5,B,7.6,5.2,4.1,6.1,1.0
+STU_2031,Computer Science,Male,Tamil Nadu,22.5,80.8,77.3,79.4,B,5.9,5.5,3.2,7.4,2.0
+STU_2032,Mechanical Eng,Male,Karnataka,14.5,62.0,71.0,68.2,C,7.1,6.6,2.1,6.2,2.0
+STU_2033,Data Science,Male,Karnataka,13.2,40.0,61.1,68.1,C,8.4,5.4,1.9,6.5,1.8
+STU_2034,Electrical Eng,Male,Maharashtra,12.3,60.2,73.1,67.9,C,6.5,6.0,1.8,7.7,2.0
+STU_2035,Electrical Eng,Male,Maharashtra,34.8,81.9,83.1,82.2,B,6.5,6.0,5.0,4.0,2.5
+STU_2036,Electrical Eng,Female,Karnataka,14.0,64.7,81.1,71.8,C,6.0,5.8,2.0,9.1,1.1
+STU_2037,Electrical Eng,Female,Karnataka,26.0,85.3,87.7,86.9,A,6.1,6.4,3.7,6.6,1.2
+STU_2038,Data Science,Female,Tamil Nadu,29.7,72.0,73.7,77.9,B,8.3,5.4,4.2,3.8,2.3
+STU_2039,Data Science,Female,Maharashtra,24.1,85.3,82.1,76.0,B,6.1,5.2,3.4,7.5,1.8
+STU_2040,Computer Science,Male,Tamil Nadu,29.3,61.8,75.5,83.4,B,4.0,5.9,4.2,8.1,1.8
+STU_2041,Business Analytics,Female,Karnataka,10.8,93.4,75.7,58.2,D,6.8,5.3,1.5,8.7,1.7
+STU_2042,Computer Science,Male,Karnataka,22.5,89.0,83.7,79.5,B,6.4,6.0,3.2,6.2,2.2
+STU_2043,Computer Science,Female,Kerala,21.8,80.7,82.6,73.6,C,7.0,5.3,3.1,7.3,1.3
+STU_2044,Computer Science,Female,Maharashtra,25.8,75.3,72.0,85.8,A,7.2,5.5,3.7,6.1,1.5
+STU_2045,Business Analytics,Male,Karnataka,13.1,80.8,75.8,71.5,C,7.7,5.6,1.9,7.8,1.0
+STU_2046,Data Science,Female,Maharashtra,11.9,81.1,80.8,72.1,C,7.3,4.4,1.7,8.7,1.9
+STU_2047,Mechanical Eng,Male,Tamil Nadu,25.8,61.4,69.1,89.1,A,7.3,5.3,3.7,5.2,2.5
+STU_2048,Business Analytics,Female,Kerala,20.1,93.0,86.5,73.8,C,6.6,6.2,2.9,6.5,1.8
+STU_2049,Electrical Eng,Male,Karnataka,24.0,86.1,89.5,84.0,B,6.6,5.4,3.4,6.7,1.9
+STU_2050,Data Science,Female,Maharashtra,20.1,49.7,70.4,77.6,B,6.7,5.9,2.9,5.9,2.6
+STU_2051,Business Analytics,Other/Prefer not to say,Karnataka,12.4,56.7,60.7,79.3,B,8.2,6.1,1.8,6.1,1.8
+STU_2052,Mechanical Eng,Other/Prefer not to say,Karnataka,10.7,77.8,75.5,74.5,C,7.0,4.7,1.5,8.6,2.2
+STU_2053,Computer Science,Other/Prefer not to say,Karnataka,14.3,98.3,85.6,68.8,C,7.3,5.7,2.0,7.8,1.2
+STU_2054,Mechanical Eng,Female,Tamil Nadu,25.8,64.9,86.4,82.0,B,6.2,6.4,3.7,5.4,2.3
+STU_2055,Mechanical Eng,Male,Delhi,22.9,71.1,71.3,74.9,C,6.8,5.7,3.3,6.2,2.0
+STU_2056,Data Science,Male,Maharashtra,11.0,88.8,80.5,81.3,B,5.2,5.0,1.6,10.7,1.5
+STU_2057,Computer Science,Male,Delhi,33.5,82.1,81.5,88.9,A,7.5,5.2,4.8,4.6,1.9
+STU_2058,Electrical Eng,Female,Tamil Nadu,7.9,76.9,71.1,69.2,C,8.5,5.1,1.1,7.8,1.5
+STU_2059,Mechanical Eng,Male,Kerala,11.6,54.4,61.9,72.8,C,5.9,6.1,1.7,9.3,1.0
+STU_2060,Data Science,Female,Karnataka,26.8,85.4,77.8,74.2,C,8.8,5.2,3.8,4.3,1.9
+STU_2061,Data Science,Male,Karnataka,28.8,79.9,86.1,88.1,A,7.9,5.5,4.1,4.5,2.0
+STU_2062,Data Science,Female,Delhi,30.3,57.8,75.7,79.8,B,6.4,5.3,4.3,6.2,1.8
+STU_2063,Computer Science,Male,Kerala,31.8,49.2,74.5,80.3,B,7.7,6.2,4.5,3.3,2.3
+STU_2064,Electrical Eng,Male,Karnataka,28.0,87.0,78.6,93.8,A,7.3,6.0,4.0,5.2,1.5
+STU_2065,Data Science,Male,Tamil Nadu,21.7,43.6,62.5,68.9,C,7.0,5.1,3.1,7.0,1.8
+STU_2066,Electrical Eng,Female,Tamil Nadu,11.0,98.2,69.3,67.9,C,6.4,5.9,1.6,9.0,1.1
+STU_2067,Data Science,Male,Karnataka,27.0,63.9,71.2,81.8,B,7.5,5.7,3.9,5.4,1.5
+STU_2068,Data Science,Female,Delhi,19.2,55.9,73.6,80.7,B,8.4,5.5,2.7,6.0,1.4
+STU_2069,Computer Science,Male,Kerala,12.3,91.1,71.1,74.3,C,6.2,5.8,1.8,7.9,2.3
+STU_2070,Business Analytics,Male,Kerala,12.6,64.5,68.2,60.6,D,6.7,4.6,1.8,8.7,2.2
+STU_2071,Computer Science,Male,Delhi,31.7,64.1,81.9,82.0,B,6.8,5.1,4.5,5.2,2.4
+STU_2072,Data Science,Female,Karnataka,24.4,72.9,76.6,84.3,B,6.9,6.0,3.5,6.5,1.1
+STU_2073,Electrical Eng,Female,Karnataka,9.5,92.8,85.4,77.7,B,7.5,5.9,1.4,6.8,2.4
+STU_2074,Computer Science,Male,Tamil Nadu,28.8,93.7,91.7,83.3,B,5.1,5.1,4.1,8.6,1.1
+STU_2075,Business Analytics,Female,Karnataka,11.5,97.6,78.7,66.5,C,7.9,5.5,1.6,7.0,2.0
+STU_2076,Computer Science,Male,Karnataka,14.6,87.7,82.4,75.5,B,8.0,5.6,2.1,6.9,1.4
+STU_2077,Electrical Eng,Female,Karnataka,10.8,78.2,66.0,64.3,D,7.9,5.8,1.5,7.7,1.1
+STU_2078,Computer Science,Male,Tamil Nadu,36.1,64.3,82.6,85.8,A,6.6,5.5,5.2,4.1,2.6
+STU_2079,Electrical Eng,Male,Karnataka,25.4,72.5,72.6,77.3,B,5.8,5.9,3.6,6.9,1.8
+STU_2080,Business Analytics,Female,Karnataka,17.5,64.2,62.4,62.4,D,6.9,5.6,2.5,6.9,2.1
+STU_2081,Electrical Eng,Male,Kerala,13.3,60.3,69.0,63.3,D,7.6,5.5,1.9,7.5,1.5
+STU_2082,Computer Science,Male,Delhi,25.5,81.2,80.4,86.4,A,7.7,5.5,3.6,5.0,2.2
+STU_2083,Business Analytics,Male,Karnataka,17.7,80.0,85.1,73.0,C,5.0,6.0,2.5,8.6,1.9
+STU_2084,Electrical Eng,Male,Karnataka,16.9,80.6,79.3,68.0,C,6.9,6.0,2.4,7.4,1.3
+STU_2085,Data Science,Male,Tamil Nadu,23.1,83.3,83.0,76.3,B,8.4,6.3,3.3,3.6,2.4
+STU_2086,Mechanical Eng,Male,Karnataka,22.1,87.3,81.1,73.5,C,7.7,5.8,3.2,6.7,0.6
+STU_2087,Computer Science,Female,Maharashtra,10.5,61.1,70.7,67.7,C,7.0,5.6,1.5,8.3,1.6
+STU_2088,Mechanical Eng,Female,Karnataka,21.8,81.9,86.8,88.6,A,6.2,5.6,3.1,7.5,1.6
+STU_2089,Computer Science,Female,Delhi,10.4,51.3,74.6,64.9,D,6.8,6.4,1.5,7.4,1.9
+STU_2090,Business Analytics,Female,Karnataka,26.1,83.9,80.9,75.2,B,6.3,5.8,3.7,6.1,2.1
+STU_2091,Computer Science,Male,Tamil Nadu,24.5,78.1,78.3,84.8,B,7.1,5.6,3.5,6.6,1.2
+STU_2092,Electrical Eng,Female,Maharashtra,25.3,65.8,85.8,83.5,B,6.9,5.1,3.6,7.1,1.3
+STU_2093,Business Analytics,Male,Kerala,26.2,92.3,86.0,80.1,B,8.0,5.7,3.7,5.3,1.3
+STU_2094,Business Analytics,Male,Tamil Nadu,10.1,65.8,79.1,73.2,C,6.8,5.5,1.4,8.0,2.3
+STU_2095,Computer Science,Female,Kerala,10.1,93.7,78.1,67.6,C,6.8,5.1,1.4,8.8,1.9
+STU_2096,Business Analytics,Male,Kerala,32.5,69.9,87.7,92.5,A,7.5,5.6,4.6,5.3,1.0
+STU_2097,Data Science,Male,Kerala,31.9,74.0,90.1,92.2,A,6.6,5.9,4.6,4.9,2.0
+STU_2098,Business Analytics,Male,Tamil Nadu,11.4,64.2,69.6,75.9,B,8.3,5.9,1.6,6.9,1.3
+STU_2099,Data Science,Female,Karnataka,20.7,85.0,81.4,70.4,C,8.3,5.5,3.0,4.9,2.3
+STU_2100,Computer Science,Female,Karnataka,20.9,78.7,75.1,66.2,C,7.8,5.4,3.0,6.2,1.6
+STU_2101,Electrical Eng,Male,Maharashtra,28.1,76.8,85.6,86.5,A,6.8,5.5,4.0,6.9,0.8
+STU_2102,Data Science,Female,Karnataka,22.6,79.2,75.0,79.4,B,6.5,5.6,3.2,6.9,1.8
+STU_2103,Electrical Eng,Female,Karnataka,7.2,74.1,72.4,67.9,C,6.5,5.8,1.0,9.4,1.3
+STU_2104,Data Science,Male,Tamil Nadu,21.3,95.9,83.0,83.0,B,8.5,4.8,3.0,5.7,2.0
+STU_2105,Computer Science,Male,Tamil Nadu,16.8,91.0,90.2,80.9,B,6.6,5.3,2.4,8.1,1.6
+STU_2106,Mechanical Eng,Female,Karnataka,15.0,75.9,71.6,75.3,B,6.5,4.8,2.1,7.9,2.7
+STU_2107,Mechanical Eng,Female,Tamil Nadu,14.0,93.5,81.6,76.5,B,7.0,5.9,2.0,8.1,1.0
+STU_2108,Mechanical Eng,Female,Tamil Nadu,23.3,60.2,61.1,69.6,C,7.6,5.1,3.3,7.2,0.8
+STU_2109,Data Science,Male,Kerala,33.2,82.4,86.8,82.0,B,7.0,5.4,4.7,5.3,1.6
+STU_2110,Electrical Eng,Male,Tamil Nadu,10.2,70.0,62.7,69.5,C,8.2,5.7,1.5,7.2,1.4
+STU_2111,Computer Science,Female,Karnataka,25.5,76.8,86.6,82.1,B,7.1,6.0,3.6,5.7,1.6
+STU_2112,Data Science,Female,Kerala,22.1,78.9,91.9,80.0,B,8.3,4.5,3.2,6.6,1.4
+STU_2113,Mechanical Eng,Female,Kerala,23.6,96.6,80.7,81.2,B,6.3,4.2,3.4,8.8,1.3
+STU_2114,Mechanical Eng,Female,Tamil Nadu,21.9,80.6,83.9,88.1,A,6.8,4.4,3.1,8.3,1.4
+STU_2115,Business Analytics,Male,Karnataka,23.4,73.9,76.0,71.6,C,7.6,5.3,3.3,5.5,2.3
+STU_2116,Electrical Eng,Female,Maharashtra,25.8,73.6,73.7,66.1,C,6.7,5.4,3.7,5.4,2.8
+STU_2117,Business Analytics,Female,Kerala,8.5,97.5,83.1,76.3,B,7.0,5.4,1.2,9.4,1.0
+STU_2118,Data Science,Female,Kerala,23.6,54.3,74.3,75.5,B,8.0,4.0,3.4,6.7,1.9
+STU_2119,Computer Science,Male,Karnataka,16.6,81.4,74.8,67.0,C,6.5,5.9,2.4,8.0,1.2
+STU_2120,Computer Science,Male,Tamil Nadu,24.7,91.2,83.0,80.6,B,7.6,5.5,3.5,4.4,3.0
+STU_2121,Computer Science,Male,Tamil Nadu,10.6,86.3,82.2,71.4,C,7.9,5.6,1.5,7.9,1.1
+STU_2122,Computer Science,Male,Maharashtra,5.9,80.2,75.0,74.4,C,6.6,5.1,0.8,9.1,2.4
+STU_2123,Computer Science,Female,Tamil Nadu,9.3,60.5,67.8,63.9,D,7.1,5.0,1.3,7.9,2.7
+STU_2124,Business Analytics,Male,Kerala,25.3,50.1,80.8,78.9,B,6.4,5.5,3.6,6.5,2.0
+STU_2125,Mechanical Eng,Male,Tamil Nadu,17.1,74.1,75.8,72.0,C,6.3,5.8,2.4,7.8,1.7
+STU_2126,Business Analytics,Male,Karnataka,29.2,63.3,75.7,81.0,B,6.4,5.1,4.2,6.7,1.6
+STU_2127,Electrical Eng,Female,Tamil Nadu,13.6,42.9,66.8,71.7,C,8.3,5.0,1.9,7.3,1.5
+STU_2128,Data Science,Male,Karnataka,7.7,89.9,74.2,66.1,C,6.9,5.2,1.1,9.9,0.9
+STU_2129,Data Science,Male,Tamil Nadu,20.9,62.6,62.4,76.0,B,7.1,5.4,3.0,6.7,1.8
+STU_2130,Data Science,Female,Karnataka,24.1,96.5,87.9,81.5,B,6.6,5.5,3.4,7.0,1.5
+STU_2131,Electrical Eng,Male,Delhi,10.4,75.9,75.6,74.3,C,6.5,5.5,1.5,7.9,2.6
+STU_2132,Mechanical Eng,Female,Kerala,8.4,77.8,78.2,73.5,C,6.5,5.1,1.2,9.3,1.9
+STU_2133,Computer Science,Female,Tamil Nadu,13.9,96.0,76.6,68.8,C,8.5,4.5,2.0,7.4,1.6
+STU_2134,Mechanical Eng,Male,Kerala,13.5,72.8,79.4,73.7,C,6.4,5.5,1.9,8.6,1.6
+STU_2135,Computer Science,Female,Tamil Nadu,21.8,72.9,79.3,78.2,B,7.1,6.0,3.1,5.4,2.4
+STU_2136,Electrical Eng,Other/Prefer not to say,Delhi,14.8,76.5,72.9,69.3,C,5.9,4.6,2.1,10.0,1.4
+STU_2137,Data Science,Male,Kerala,22.8,74.8,74.3,81.3,B,6.3,5.5,3.3,7.1,1.8
+STU_2138,Computer Science,Male,Kerala,26.5,44.7,73.3,78.4,B,4.5,5.2,3.8,9.0,1.5
+STU_2139,Electrical Eng,Other/Prefer not to say,Kerala,22.1,41.5,66.9,79.6,B,7.9,5.4,3.2,5.0,2.5
+STU_2140,Computer Science,Female,Kerala,11.3,60.0,66.0,62.6,D,5.5,5.2,1.6,9.9,1.8
+STU_2141,Mechanical Eng,Female,Kerala,12.2,77.1,83.7,79.8,B,7.2,5.9,1.7,7.5,1.7
+STU_2142,Data Science,Female,Delhi,22.1,87.5,91.6,79.6,B,7.5,5.3,3.2,5.9,2.1
+STU_2143,Data Science,Male,Tamil Nadu,16.7,87.9,74.2,72.6,C,8.0,5.8,2.4,6.5,1.3
+STU_2144,Data Science,Male,Tamil Nadu,13.8,94.4,75.8,81.9,B,7.8,6.2,2.0,6.4,1.6
+STU_2145,Computer Science,Male,Delhi,21.1,87.1,94.6,71.1,C,6.9,5.8,3.0,6.6,1.7
+STU_2146,Data Science,Male,Tamil Nadu,10.2,77.6,73.3,63.2,D,7.7,4.8,1.5,8.0,2.0
+STU_2147,Business Analytics,Male,Tamil Nadu,12.3,86.1,72.3,73.3,C,5.8,4.7,1.8,9.6,2.1
+STU_2148,Mechanical Eng,Female,Tamil Nadu,19.6,67.6,72.3,71.1,C,7.3,5.7,2.8,6.5,1.7
+STU_2149,Data Science,Female,Tamil Nadu,14.5,75.4,77.5,74.3,C,7.8,5.2,2.1,6.2,2.7
+STU_2150,Data Science,Female,Kerala,10.6,83.0,69.4,68.8,C,7.4,5.1,1.5,9.5,0.5
+STU_2151,Computer Science,Male,Maharashtra,8.1,45.5,65.1,64.9,D,7.4,4.9,1.2,8.9,1.6
+STU_2152,Electrical Eng,Male,Karnataka,27.6,42.7,69.3,73.7,C,5.3,6.2,3.9,7.7,0.9
+STU_2153,Electrical Eng,Female,Karnataka,12.1,74.5,77.3,63.7,D,6.7,5.0,1.7,9.3,1.3
+STU_2154,Data Science,Male,Karnataka,14.7,84.2,82.3,75.7,B,7.7,4.7,2.1,7.2,2.3
+STU_2155,Electrical Eng,Male,Karnataka,10.7,62.2,63.7,71.6,C,8.0,5.2,1.5,7.9,1.4
+STU_2156,Mechanical Eng,Female,Kerala,14.1,89.3,78.6,71.5,C,6.0,5.1,2.0,8.9,2.0
+STU_2157,Computer Science,Other/Prefer not to say,Kerala,28.7,57.0,83.0,83.8,B,7.5,5.2,4.1,6.2,1.0
+STU_2158,Electrical Eng,Female,Maharashtra,22.7,92.3,90.6,84.1,B,7.0,5.0,3.2,7.0,1.8
+STU_2159,Mechanical Eng,Female,Delhi,24.8,74.4,86.1,72.9,C,7.7,5.2,3.5,5.0,2.6
+STU_2160,Computer Science,Other/Prefer not to say,Kerala,20.2,79.4,77.3,76.2,B,6.4,5.7,2.9,6.0,3.0
+STU_2161,Mechanical Eng,Female,Karnataka,12.1,83.0,70.1,69.7,C,8.0,6.0,1.7,6.3,2.0
+STU_2162,Business Analytics,Male,Karnataka,31.2,81.1,72.2,74.4,C,6.0,5.7,4.5,6.2,1.6
+STU_2163,Computer Science,Female,Tamil Nadu,30.3,88.4,92.8,83.2,B,7.6,5.6,4.3,5.3,1.2
+STU_2164,Data Science,Male,Kerala,14.2,85.2,72.5,74.6,C,7.4,6.4,2.0,7.2,1.0
+STU_2165,Data Science,Female,Karnataka,21.8,43.6,76.5,80.0,B,6.1,5.7,3.1,7.1,2.0
+STU_2166,Electrical Eng,Female,Delhi,24.0,70.7,83.0,86.9,A,8.1,5.0,3.4,6.0,1.5
+STU_2167,Data Science,Female,Tamil Nadu,22.6,85.2,76.1,73.1,C,6.5,4.8,3.2,7.6,1.9
+STU_2168,Data Science,Female,Maharashtra,26.4,85.7,87.1,88.7,A,9.4,6.0,3.8,3.6,1.2
+STU_2169,Data Science,Female,Kerala,11.4,77.6,72.6,73.1,C,7.5,5.4,1.6,8.0,1.5
+STU_2170,Electrical Eng,Male,Karnataka,20.3,74.8,73.9,70.7,C,8.8,5.6,2.9,4.9,1.8
+STU_2171,Computer Science,Male,Maharashtra,13.7,72.1,76.0,75.4,B,8.3,5.4,2.0,7.8,0.5
+STU_2172,Business Analytics,Male,Tamil Nadu,10.9,57.0,83.0,77.2,B,6.8,5.8,1.6,8.1,1.7
+STU_2173,Mechanical Eng,Female,Karnataka,12.6,85.9,89.8,77.5,B,8.4,5.1,1.8,6.9,1.8
+STU_2174,Computer Science,Female,Tamil Nadu,12.5,54.1,75.1,63.8,D,7.8,6.1,1.8,6.6,1.7
+STU_2175,Electrical Eng,Female,Tamil Nadu,12.0,71.0,71.3,57.8,D,6.4,5.6,1.7,8.0,2.3
+STU_2176,Business Analytics,Female,Kerala,30.0,87.8,88.8,92.0,A,5.2,5.5,4.3,7.4,1.6
+STU_2177,Electrical Eng,Male,Tamil Nadu,13.9,84.1,84.9,69.4,C,8.2,5.7,2.0,6.3,1.8
+STU_2178,Data Science,Female,Tamil Nadu,23.5,61.7,83.1,73.1,C,6.9,6.1,3.4,5.6,2.0
+STU_2179,Mechanical Eng,Female,Karnataka,13.4,86.4,73.3,66.4,C,6.8,4.9,1.9,8.0,2.4
+STU_2180,Computer Science,Male,Karnataka,26.5,81.1,77.3,79.6,B,7.5,5.7,3.8,5.3,1.7
+STU_2181,Data Science,Male,Delhi,13.5,75.7,77.2,77.9,B,6.7,5.6,1.9,7.4,2.4
+STU_2182,Computer Science,Female,Karnataka,31.8,87.7,90.7,83.3,B,7.4,6.3,4.5,3.4,2.4
+STU_2183,Computer Science,Male,Karnataka,14.6,57.8,70.5,74.7,C,5.5,5.3,2.1,9.7,1.4
+STU_2184,Mechanical Eng,Female,Kerala,24.5,74.6,82.9,80.2,B,6.7,5.2,3.5,6.7,1.9
+STU_2185,Business Analytics,Male,Kerala,18.7,93.9,83.1,81.0,B,7.9,5.2,2.7,6.4,1.8
+STU_2186,Data Science,Female,Kerala,11.6,81.7,70.1,75.8,B,7.5,6.4,1.7,6.6,1.8
+STU_2187,Computer Science,Male,Kerala,22.1,76.5,80.7,70.5,C,8.7,5.9,3.2,5.3,0.9
+STU_2188,Electrical Eng,Female,Maharashtra,17.9,87.3,82.0,72.7,C,5.9,6.0,2.6,8.5,1.0
+STU_2189,Data Science,Male,Tamil Nadu,26.7,85.8,76.4,82.1,B,6.0,5.4,3.8,7.5,1.3
+STU_2190,Data Science,Male,Delhi,22.1,79.6,72.2,83.5,B,5.6,5.0,3.2,10.0,0.2
+STU_2191,Computer Science,Male,Tamil Nadu,13.7,85.2,78.7,76.5,B,7.3,5.6,2.0,7.1,2.0
+STU_2192,Data Science,Male,Tamil Nadu,23.8,70.9,78.6,78.7,B,7.6,6.0,3.4,5.2,1.8
+STU_2193,Mechanical Eng,Female,Delhi,29.5,94.7,75.9,74.7,C,6.1,5.7,4.2,5.9,2.1
+STU_2194,Data Science,Female,Karnataka,13.7,77.9,72.2,58.8,D,7.7,5.6,2.0,7.4,1.3
+STU_2195,Electrical Eng,Female,Delhi,15.1,80.5,77.3,77.2,B,5.2,5.4,2.2,9.9,1.3
+STU_2196,Electrical Eng,Male,Maharashtra,24.2,74.9,75.6,76.5,B,6.6,5.8,3.5,6.0,2.1
+STU_2197,Mechanical Eng,Male,Tamil Nadu,17.3,68.0,79.2,72.8,C,5.0,6.0,2.5,8.6,1.9
+STU_2198,Mechanical Eng,Male,Karnataka,23.0,40.0,61.5,74.7,C,6.4,5.7,3.3,7.1,1.5
+STU_2199,Mechanical Eng,Female,Kerala,28.3,88.8,84.7,91.8,A,7.6,5.6,4.0,5.5,1.3
+STU_2200,Computer Science,Female,Karnataka,12.3,68.7,71.8,72.7,C,6.0,5.8,1.8,8.7,1.7
+STU_2201,Data Science,Female,Delhi,24.5,78.4,86.4,80.9,B,7.6,5.0,3.5,7.0,0.9
+STU_2202,Mechanical Eng,Male,Tamil Nadu,11.5,66.3,79.1,78.1,B,7.1,5.3,1.6,8.0,2.0
+STU_2203,Electrical Eng,Male,Karnataka,19.5,65.3,77.8,78.0,B,6.6,5.3,2.8,7.6,1.7
+STU_2204,Computer Science,Female,Delhi,23.0,94.1,88.1,79.7,B,6.1,5.4,3.3,7.2,2.0
+STU_2205,Computer Science,Male,Maharashtra,22.9,40.0,69.9,84.4,B,7.6,5.9,3.3,5.7,1.5
+STU_2206,Data Science,Female,Tamil Nadu,6.4,82.7,68.3,61.3,D,5.2,6.3,0.9,10.2,1.4
+STU_2207,Data Science,Male,Kerala,11.7,84.0,85.7,72.1,C,6.7,6.0,1.7,7.9,1.7
+STU_2208,Mechanical Eng,Male,Maharashtra,14.7,62.6,73.3,69.6,C,6.6,5.5,2.1,8.3,1.5
+STU_2209,Business Analytics,Male,Kerala,24.5,79.1,87.9,77.1,B,7.5,5.6,3.5,5.9,1.5
+STU_2210,Mechanical Eng,Male,Tamil Nadu,13.8,67.8,65.7,66.2,C,7.0,5.8,2.0,6.2,3.0
+STU_2211,Electrical Eng,Male,Delhi,21.3,95.7,84.5,79.6,B,6.7,5.0,3.0,8.0,1.3
+STU_2212,Mechanical Eng,Male,Kerala,27.7,57.7,68.1,72.9,C,7.8,5.7,4.0,4.5,2.0
+STU_2213,Computer Science,Female,Karnataka,15.1,86.6,75.2,61.6,D,5.5,5.5,2.2,8.5,2.3
+STU_2214,Mechanical Eng,Female,Karnataka,11.4,93.7,79.9,78.1,B,6.5,5.4,1.6,8.8,1.7
+STU_2215,Computer Science,Female,Kerala,17.0,65.9,73.2,74.8,C,7.6,5.1,2.4,7.7,1.2
+STU_2216,Computer Science,Female,Kerala,29.9,88.9,90.2,96.6,A,7.7,5.0,4.3,4.3,2.7
+STU_2217,Electrical Eng,Male,Tamil Nadu,16.3,93.8,72.2,65.5,C,6.6,5.5,2.3,8.4,1.2
+STU_2218,Computer Science,Female,Kerala,13.3,84.1,82.5,68.3,C,7.6,4.6,1.9,8.9,1.0
+STU_2219,Data Science,Other/Prefer not to say,Kerala,25.0,92.1,76.8,66.3,C,5.6,5.1,3.6,7.4,2.3
+STU_2220,Computer Science,Female,Karnataka,21.6,56.1,69.2,74.6,C,5.5,6.3,3.1,7.7,1.4
+STU_2221,Computer Science,Male,Karnataka,16.9,73.8,71.0,66.8,C,6.3,6.0,2.4,8.1,1.2
+STU_2222,Computer Science,Male,Maharashtra,28.1,82.9,78.8,82.3,B,7.0,5.6,4.0,5.2,2.2
+STU_2223,Data Science,Female,Karnataka,22.6,56.0,71.8,76.6,B,6.9,5.4,3.2,6.4,2.1
+STU_2224,Electrical Eng,Female,Tamil Nadu,16.6,81.4,88.7,77.6,B,6.9,5.2,2.4,7.9,1.6
+STU_2225,Computer Science,Male,Karnataka,9.0,86.6,69.3,69.9,C,7.7,5.0,1.3,8.9,1.1
+STU_2226,Business Analytics,Male,Kerala,23.7,76.2,81.2,86.3,A,6.3,5.1,3.4,7.5,1.7
+STU_2227,Computer Science,Female,Karnataka,14.0,82.9,71.0,76.2,B,7.5,5.9,2.0,6.7,1.9
+STU_2228,Electrical Eng,Female,Tamil Nadu,28.1,89.2,85.8,82.8,B,7.6,5.4,4.0,3.7,3.3
+STU_2229,Mechanical Eng,Female,Karnataka,12.9,82.5,80.7,71.3,C,6.9,5.9,1.8,6.9,2.5
+STU_2230,Business Analytics,Female,Tamil Nadu,10.9,55.8,59.0,73.5,C,6.7,5.4,1.6,9.4,0.9
+STU_2231,Mechanical Eng,Female,Maharashtra,26.8,71.3,87.2,82.1,B,8.0,5.2,3.8,5.5,1.5
+STU_2232,Data Science,Female,Tamil Nadu,28.1,62.6,84.4,75.6,B,8.1,5.6,4.0,4.7,1.6
+STU_2233,Data Science,Male,Karnataka,11.5,67.8,69.4,61.5,D,6.7,6.6,1.6,7.1,2.0
+STU_2234,Mechanical Eng,Female,Maharashtra,11.9,82.3,68.1,68.7,C,6.8,4.3,1.7,9.5,1.7
+STU_2235,Data Science,Male,Karnataka,13.9,67.7,71.7,72.9,C,8.4,5.7,2.0,6.9,1.0
+STU_2236,Data Science,Male,Delhi,21.8,73.7,72.9,73.3,C,4.1,6.0,3.1,9.8,1.0
+STU_2237,Electrical Eng,Female,Maharashtra,28.4,42.9,73.7,77.2,B,7.0,5.5,4.1,5.2,2.2
+STU_2238,Data Science,Female,Kerala,8.9,62.5,70.3,68.3,C,7.7,5.6,1.3,7.3,2.1
+STU_2239,Computer Science,Female,Maharashtra,32.5,63.3,80.1,91.2,A,7.1,5.1,4.6,4.7,2.5
+STU_2240,Electrical Eng,Female,Maharashtra,11.1,78.4,60.3,66.3,C,6.8,6.1,1.6,8.8,0.7
+STU_2241,Computer Science,Female,Tamil Nadu,9.4,69.4,74.0,70.4,C,7.0,5.9,1.3,7.7,2.1
+STU_2242,Data Science,Other/Prefer not to say,Kerala,18.9,93.0,84.1,76.8,B,6.6,5.3,2.7,6.6,2.8
+STU_2243,Business Analytics,Female,Karnataka,13.9,46.9,73.7,81.0,B,8.4,5.2,2.0,6.3,2.1
+STU_2244,Data Science,Female,Karnataka,8.3,53.2,58.5,55.8,D,6.9,5.7,1.2,8.6,1.6
+STU_2245,Electrical Eng,Female,Karnataka,13.7,98.7,80.1,72.1,C,6.6,4.9,2.0,9.3,1.2
+STU_2246,Computer Science,Male,Maharashtra,17.7,82.6,77.3,83.2,B,7.3,5.9,2.5,6.7,1.6
+STU_2247,Electrical Eng,Male,Kerala,26.4,56.0,70.7,83.2,B,7.4,6.0,3.8,4.5,2.3
+STU_2248,Electrical Eng,Male,Kerala,13.8,77.8,62.3,69.3,C,5.1,6.0,2.0,8.2,2.7
+STU_2249,Mechanical Eng,Female,Tamil Nadu,24.4,66.3,74.3,77.4,B,5.8,5.2,3.5,8.8,0.7
+STU_2250,Data Science,Male,Kerala,30.9,80.1,80.2,90.1,A,8.0,5.8,4.4,4.7,1.1

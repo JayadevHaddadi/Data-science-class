@@ -1,0 +1,515 @@
+import json
+
+cells = [
+    {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+            "# 📈 Class 02: Data Visualization Introduction\n",
+            "### *From Code to Insight: Fundamentals of Matplotlib & Chart Selection*\n",
+            "\n",
+            "**Topics Covered Today:**\n",
+            "1. **Fundamentals of Matplotlib** (Figure, Axes, OO Interface vs Pyplot)\n",
+            "2. **Distribution**: Histogram, KDE, Boxplot\n",
+            "3. **Comparison**: Bar chart (Vertical, Horizontal, Grouped)\n",
+            "4. **Relationship**: Scatter plot (with Hue & Size)\n",
+            "5. **Time Trend**: Line chart (Time-series analysis)\n",
+            "6. **Composition**: Stacked bar chart vs. Pie chart\n",
+            "7. **Correlation**: Scatter plot with regression & Heatmap\n",
+            "8. **Multiple Variables**: Pair plot (Multivariate analysis)\n",
+            "9. **Geographic Pattern**: Regional comparison / Choropleth representation\n",
+            "\n",
+            "> 📌 **How to use this notebook:** All code is pre-written and ready to run! Focus on **how the visual tells a story**, the design choices, and the **Analytic Discussions** throughout."
+        ]
+    },
+    {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+            "## 0. Setup & Data Loading\n",
+            "Let's import `matplotlib.pyplot`, `seaborn`, `pandas`, and `numpy`. We will load two datasets:\n",
+            "1. `student_demographics_performance.csv` (250 students, cross-sectional demographics & exam performance)\n",
+            "2. `student_weekly_trends.csv` (12-week longitudinal study & quiz trends)"
+        ]
+    },
+    {
+        "cell_type": "code",
+        "execution_count": None,
+        "metadata": {},
+        "outputs": [],
+        "source": [
+            "import numpy as np\n",
+            "import pandas as pd\n",
+            "import matplotlib.pyplot as plt\n",
+            "import seaborn as sns\n",
+            "\n",
+            "# Set clean, professional visual aesthetics\n",
+            "plt.style.use('seaborn-v0_8-whitegrid' if 'seaborn-v0_8-whitegrid' in plt.style.available else 'default')\n",
+            "plt.rcParams['font.sans-serif'] = 'DejaVu Sans'\n",
+            "plt.rcParams['figure.dpi'] = 110\n",
+            "\n",
+            "# Load datasets\n",
+            "df = pd.read_csv('datasets/student_demographics_performance.csv')\n",
+            "df_weekly = pd.read_csv('datasets/student_weekly_trends.csv')\n",
+            "\n",
+            "print(f\"Students dataset: {df.shape[0]} rows, {df.shape[1]} columns\")\n",
+            "print(f\"Weekly trends dataset: {df_weekly.shape[0]} rows, {df_weekly.shape[1]} columns\")\n",
+            "df.head(3)"
+        ]
+    },
+    {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+            "---\n",
+            "## 1. Fundamentals of Matplotlib: Anatomy of a Figure\n",
+            "\n",
+            "Matplotlib has two interfaces:\n",
+            "1. **`plt.plot()` (State-based / Pyplot)**: Quick and dirty, keeps track of current figure implicitly.\n",
+            "2. **`fig, ax = plt.subplots()` (Object-Oriented / OO Interface)**: **Industry standard**. You create a canvas (`Figure`) and one or more subplots (`Axes`). It gives you complete control over every element.\n",
+            "\n",
+            "Let's visualize the anatomy of a plot using the OO interface:"
+        ]
+    },
+    {
+        "cell_type": "code",
+        "execution_count": None,
+        "metadata": {},
+        "outputs": [],
+        "source": [
+            "# 1. Create the Figure canvas and Axes\n",
+            "fig, ax = plt.subplots(figsize=(8, 4))\n",
+            "\n",
+            "# 2. Plot data on the ax object\n",
+            "ax.plot(df_weekly['week'], df_weekly['avg_quiz_score'], marker='o', color='#1f77b4', linewidth=2.5, label='Avg Quiz Score')\n",
+            "\n",
+            "# 3. Customize anatomy: Title, Labels, Limits, Ticks, Grid\n",
+            "ax.set_title('Matplotlib Anatomy: Weekly Quiz Score Performance', fontsize=14, fontweight='bold', pad=12)\n",
+            "ax.set_xlabel('Semester Week', fontsize=11, fontweight='semibold')\n",
+            "ax.set_ylabel('Score (0 - 100)', fontsize=11, fontweight='semibold')\n",
+            "ax.set_xticks(df_weekly['week'])  # Force every week to show on x-axis\n",
+            "ax.set_ylim(50, 100)\n",
+            "ax.axhline(75, color='gray', linestyle='--', alpha=0.7, label='Passing Benchmark (75)')\n",
+            "ax.legend(loc='lower right', frameon=True)\n",
+            "ax.grid(True, linestyle=':', alpha=0.6)\n",
+            "\n",
+            "plt.tight_layout()\n",
+            "plt.show()"
+        ]
+    },
+    {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+            "---\n",
+            "## 2. Distribution: Histogram, KDE, and Boxplot\n",
+            "\n",
+            "**Purpose**: Understand the shape, spread, central peak, and anomalies in a single numerical variable.\n",
+            "- **Histogram**: Bins continuous data into buckets; shows frequency count.\n",
+            "- **KDE (Kernel Density Estimate)**: A smoothed continuous probability density curve.\n",
+            "- **Boxplot**: Compact 5-number summary; highlights outliers using Tukey's fences."
+        ]
+    },
+    {
+        "cell_type": "code",
+        "execution_count": None,
+        "metadata": {},
+        "outputs": [],
+        "source": [
+            "fig, axes = plt.subplots(1, 3, figsize=(15, 4.5))\n",
+            "\n",
+            "# 1. Histogram\n",
+            "axes[0].hist(df['study_hours_weekly'], bins=15, color='#4575b4', edgecolor='white', alpha=0.85)\n",
+            "axes[0].set_title('Histogram (Bins = 15)', fontweight='bold')\n",
+            "axes[0].set_xlabel('Weekly Study Hours')\n",
+            "axes[0].set_ylabel('Student Count')\n",
+            "\n",
+            "# 2. KDE Plot\n",
+            "sns.kdeplot(df['study_hours_weekly'], ax=axes[1], color='#d73027', fill=True, alpha=0.3, linewidth=2)\n",
+            "axes[1].set_title('KDE (Smoothed Density)', fontweight='bold')\n",
+            "axes[1].set_xlabel('Weekly Study Hours')\n",
+            "axes[1].set_ylabel('Density')\n",
+            "\n",
+            "# 3. Boxplot\n",
+            "sns.boxplot(y=df['study_hours_weekly'], ax=axes[2], color='#74add1', width=0.4)\n",
+            "axes[2].set_title('Boxplot (Tukey Fences)', fontweight='bold')\n",
+            "axes[2].set_ylabel('Weekly Study Hours')\n",
+            "\n",
+            "plt.tight_layout()\n",
+            "plt.show()"
+        ]
+    },
+    {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+            "### 💬 Analytic Discussion 1: The Bimodal Mystery (Histogram vs. Boxplot)\n",
+            "\n",
+            "**Look closely at the Histogram and KDE vs. the Boxplot above:**\n",
+            "1. In the **Histogram and KDE**, notice there are **TWO distinct peaks** (one around ~12 hours, another around ~25 hours). This is a **bimodal distribution** (two different cohorts of students).\n",
+            "2. Now look at the **Boxplot**: Does the boxplot reveal that there are two separate groups? Or does it just show a single box spanning across both?\n",
+            "\n",
+            "**Key Analytic Insight:**  \n",
+            "*A boxplot summarizes the middle 50% between Q1 and Q3, but it completely conceals valleys, multimodality, or clusters! If you rely only on a boxplot, you would never know two distinct student types exist. Always pair boxplots with a histogram or KDE!*"
+        ]
+    },
+    {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+            "---\n",
+            "## 3. Comparison: Bar Charts (Vertical, Horizontal, Grouped)\n",
+            "\n",
+            "**Purpose**: Compare discrete categories or groups on a continuous metric.\n",
+            "- **Vertical Bar Chart**: Standard when categories have short names.\n",
+            "- **Horizontal Bar Chart (`barh`)**: Essential when category names are long to prevent overlapping labels.\n",
+            "- **Grouped Bar Chart**: Comparing multiple categories across a sub-dimension."
+        ]
+    },
+    {
+        "cell_type": "code",
+        "execution_count": None,
+        "metadata": {},
+        "outputs": [],
+        "source": [
+            "# Compute average score by major\n",
+            "major_stats = df.groupby('major')['final_score'].mean().sort_values()\n",
+            "\n",
+            "fig, axes = plt.subplots(1, 2, figsize=(14, 5))\n",
+            "\n",
+            "# 1. Horizontal Bar Chart (Clean for reading major names)\n",
+            "axes[0].barh(major_stats.index, major_stats.values, color='#3182bd', edgecolor='black', alpha=0.85)\n",
+            "axes[0].set_title('Average Final Score by Major (Horizontal Bar)', fontweight='bold')\n",
+            "axes[0].set_xlabel('Average Final Score')\n",
+            "axes[0].set_xlim(0, 100)  # Always start at 0!\n",
+            "for i, v in enumerate(major_stats.values):\n",
+            "    axes[0].text(v + 1, i, f\"{v:.1f}\", va='center', fontweight='semibold')\n",
+            "\n",
+            "# 2. Grouped Bar Chart by Major and Gender\n",
+            "sns.barplot(data=df, x='major', y='final_score', hue='gender', ci=None, ax=axes[1], palette='Set2')\n",
+            "axes[1].set_title('Grouped Comparison: Major & Gender', fontweight='bold')\n",
+            "axes[1].set_xlabel('Major')\n",
+            "axes[1].set_ylabel('Average Final Score')\n",
+            "axes[1].set_ylim(0, 100)\n",
+            "axes[1].tick_params(axis='x', rotation=25)\n",
+            "axes[1].legend(title='Gender', loc='lower right')\n",
+            "\n",
+            "plt.tight_layout()\n",
+            "plt.show()"
+        ]
+    },
+    {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+            "### 💬 Analytic Discussion 2: The \"Truncated Y-Axis\" Lie\n",
+            "Let's run this experiment. Look at how changing the Y-axis baseline alters your psychological perception:"
+        ]
+    },
+    {
+        "cell_type": "code",
+        "execution_count": None,
+        "metadata": {},
+        "outputs": [],
+        "source": [
+            "fig, axes = plt.subplots(1, 2, figsize=(12, 4))\n",
+            "\n",
+            "# Misleading: Truncated Y-axis (starts at 70)\n",
+            "axes[0].bar(major_stats.index, major_stats.values, color='#e6550d', alpha=0.85)\n",
+            "axes[0].set_title('⚠️ Chart A: Y-Axis Starts at 70 (MISLEADING!)', color='darkred', fontweight='bold')\n",
+            "axes[0].set_ylim(70, 85)\n",
+            "axes[0].tick_params(axis='x', rotation=30)\n",
+            "\n",
+            "# Honest: Y-axis starts at 0\n",
+            "axes[1].bar(major_stats.index, major_stats.values, color='#31a354', alpha=0.85)\n",
+            "axes[1].set_title('✅ Chart B: Y-Axis Starts at 0 (HONEST)', color='darkgreen', fontweight='bold')\n",
+            "axes[1].set_ylim(0, 100)\n",
+            "axes[1].tick_params(axis='x', rotation=30)\n",
+            "\n",
+            "plt.tight_layout()\n",
+            "plt.show()"
+        ]
+    },
+    {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+            "**Questions for the Class:**\n",
+            "1. In **Chart A**, does it look like Computer Science scored *three times higher* than Mechanical Engineering?\n",
+            "2. In reality (Chart B), what is the actual difference between them? (74.2 vs 79.5 — less than 5 points!).\n",
+            "\n",
+            "**Golden Rule of Data Ethics:**  \n",
+            "*Because the human brain interprets the height of a bar as its magnitude, bar charts MUST ALWAYS start at zero. Truncating the y-axis is the #1 trick used in misleading news infographics!*"
+        ]
+    },
+    {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+            "---\n",
+            "## 4. Time Trend: Line Charts\n",
+            "\n",
+            "**Purpose**: Track continuous changes, momentum, seasonal cycles, and trends over ordered time intervals."
+        ]
+    },
+    {
+        "cell_type": "code",
+        "execution_count": None,
+        "metadata": {},
+        "outputs": [],
+        "source": [
+            "fig, ax1 = plt.subplots(figsize=(10, 5))\n",
+            "\n",
+            "# Primary Y-axis: Study hours across 3 subjects\n",
+            "ax1.plot(df_weekly['week'], df_weekly['study_hours_datascience'], marker='o', linewidth=2.5, color='#2b83ba', label='Data Science (hrs)')\n",
+            "ax1.plot(df_weekly['week'], df_weekly['study_hours_cs'], marker='s', linewidth=2.5, color='#abdda4', label='Computer Science (hrs)')\n",
+            "ax1.plot(df_weekly['week'], df_weekly['study_hours_math'], marker='^', linewidth=2.5, color='#fdae61', label='Math (hrs)')\n",
+            "ax1.set_xlabel('Semester Week', fontsize=12, fontweight='bold')\n",
+            "ax1.set_ylabel('Weekly Study Hours', fontsize=12, fontweight='bold', color='#2b83ba')\n",
+            "ax1.set_xticks(df_weekly['week'])\n",
+            "\n",
+            "# Secondary Y-axis: Stress Level (1 - 10)\n",
+            "ax2 = ax1.twinx()\n",
+            "ax2.plot(df_weekly['week'], df_weekly['stress_level'], color='#d7191c', linestyle='--', linewidth=2, marker='x', label='Reported Stress Level (1-10)')\n",
+            "ax2.set_ylabel('Stress Level (1-10)', fontsize=12, fontweight='bold', color='#d7191c')\n",
+            "ax2.set_ylim(1, 10)\n",
+            "\n",
+            "# Add critical annotations\n",
+            "ax1.axvspan(5.5, 7.5, color='gray', alpha=0.15, label='Midterm Exams Window')\n",
+            "ax1.annotate('Midterm Dip', xy=(7, 11), xytext=(7.5, 8), \n",
+            "             arrowprops=dict(facecolor='black', shrink=0.05, width=1, headwidth=6), fontweight='bold')\n",
+            "ax1.annotate('Finals Cramming Surge', xy=(11, 28), xytext=(8.5, 29), \n",
+            "             arrowprops=dict(facecolor='darkred', shrink=0.05, width=1, headwidth=6), fontweight='bold', color='darkred')\n",
+            "\n",
+            "plt.title('Semester Progression: Study Hours vs. Student Stress Over 12 Weeks', fontsize=14, fontweight='bold', pad=15)\n",
+            "ax1.legend(loc='upper left')\n",
+            "ax2.legend(loc='lower right')\n",
+            "plt.tight_layout()\n",
+            "plt.show()"
+        ]
+    },
+    {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+            "### 💬 Analytic Discussion 3: Storytelling with Time Series\n",
+            "\n",
+            "**Questions for the Class:**\n",
+            "1. What happened between **Week 6 and Week 7**? Why did study hours drop even though stress peaked? *(Insight: Midterm exams ended; students experienced burnout/relief right after).* \n",
+            "2. What happens in **Weeks 11 and 12**? Look at the relationship between study hours and stress level. Is cramming sustainable?"
+        ]
+    },
+    {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+            "---\n",
+            "## 5. Composition: Stacked Bar Chart vs. Pie Chart\n",
+            "\n",
+            "**Purpose**: Show how individual parts make up a whole (100% or 24-hour day)."
+        ]
+    },
+    {
+        "cell_type": "code",
+        "execution_count": None,
+        "metadata": {},
+        "outputs": [],
+        "source": [
+            "# Compute average daily 24-hour time budget across all students\n",
+            "time_budget = df[['daily_sleep_hrs', 'daily_classes_hrs', 'daily_study_hrs', 'daily_leisure_hrs', 'daily_commute_hrs']].mean()\n",
+            "labels = ['Sleep', 'Classes', 'Self-Study', 'Leisure', 'Commute']\n",
+            "colors = ['#4575b4', '#74add1', '#abd9e9', '#fdae61', '#f46d43']\n",
+            "\n",
+            "fig, axes = plt.subplots(1, 2, figsize=(14, 5))\n",
+            "\n",
+            "# 1. Pie Chart (Common, but controversial!)\n",
+            "axes[0].pie(time_budget, labels=labels, autopct='%1.1f%%', startangle=140, colors=colors, \n",
+            "            wedgeprops=dict(edgecolor='white', linewidth=2))\n",
+            "axes[0].set_title('Composition via Pie Chart (24-Hour Day)', fontweight='bold')\n",
+            "\n",
+            "# 2. Stacked Horizontal Bar Chart (Recommended alternative!)\n",
+            "bottom = 0\n",
+            "for val, lab, col in zip(time_budget, labels, colors):\n",
+            "    axes[1].barh(['Average Student'], val, left=bottom, color=col, label=f\"{lab} ({val:.1f}h)\", edgecolor='white')\n",
+            "    # Add text label inside bar segment\n",
+            "    axes[1].text(bottom + val/2, 0, f\"{val:.1f}h\", ha='center', va='center', color='black', fontweight='bold')\n",
+            "    bottom += val\n",
+            "\n",
+            "axes[1].set_title('Composition via Stacked Bar (24-Hour Day)', fontweight='bold')\n",
+            "axes[1].set_xlabel('Hours in a Day (Total = 24h)')\n",
+            "axes[1].set_xlim(0, 24)\n",
+            "axes[1].legend(loc='lower center', bbox_to_anchor=(0.5, -0.25), ncol=5)\n",
+            "\n",
+            "plt.tight_layout()\n",
+            "plt.show()"
+        ]
+    },
+    {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+            "### 💬 Analytic Discussion 4: Why Data Scientists Hate Pie Charts\n",
+            "\n",
+            "**Look at the Pie Chart:**\n",
+            "1. Can you instantly tell whether **Classes (5.5h)** is larger or smaller than **Leisure (6.2h)** just by looking at the angle of the slices?\n",
+            "2. Now look at the **Stacked Bar**: Is it easier to compare lengths along a straight axis?\n",
+            "\n",
+            "**The Science of Human Perception:**  \n",
+            "Psychophysics research shows human brains are exceptionally good at comparing **linear position and length**, but notoriously inaccurate at judging **2D angles and surface areas**.\n",
+            "- **Rule**: Limit pie charts to a maximum of 2 to 3 slices with stark differences (e.g. Yes 80% / No 20%). For 4+ categories, use a **bar chart** or **stacked bar**."
+        ]
+    },
+    {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+            "---\n",
+            "## 6. Relationship & Correlation: Scatter Plots & Heatmaps\n",
+            "\n",
+            "**Purpose**: Analyze how two numerical features interact, detect correlations, and find clusters."
+        ]
+    },
+    {
+        "cell_type": "code",
+        "execution_count": None,
+        "metadata": {},
+        "outputs": [],
+        "source": [
+            "fig, axes = plt.subplots(1, 2, figsize=(14, 5))\n",
+            "\n",
+            "# 1. Scatter Plot with Hue and Linear Trendline\n",
+            "sns.scatterplot(data=df, x='study_hours_weekly', y='final_score', hue='major', style='major', s=70, alpha=0.8, ax=axes[0])\n",
+            "sns.regplot(data=df, x='study_hours_weekly', y='final_score', scatter=False, ax=axes[0], color='darkred', line_kws=dict(linewidth=2, linestyle='--'))\n",
+            "axes[0].set_title('Relationship: Study Hours vs. Final Score', fontweight='bold')\n",
+            "axes[0].set_xlabel('Weekly Study Hours')\n",
+            "axes[0].set_ylabel('Final Score (0-100)')\n",
+            "axes[0].legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)\n",
+            "\n",
+            "# 2. Correlation Heatmap\n",
+            "corr_vars = ['study_hours_weekly', 'attendance_rate', 'midterm_score', 'final_score', 'daily_sleep_hrs', 'daily_leisure_hrs']\n",
+            "corr = df[corr_vars].corr()\n",
+            "sns.heatmap(corr, annot=True, cmap='vlag', vmin=-1, vmax=1, fmt='.2f', linewidths=0.5, ax=axes[1])\n",
+            "axes[1].set_title('Correlation Matrix Heatmap', fontweight='bold')\n",
+            "axes[1].tick_params(axis='x', rotation=45)\n",
+            "\n",
+            "plt.tight_layout()\n",
+            "plt.show()"
+        ]
+    },
+    {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+            "---\n",
+            "## 7. Multiple Variables: Pair Plot\n",
+            "\n",
+            "**Purpose**: When you have 4+ continuous features and want to inspect every pairwise scatter plot alongside each variable's distribution in a single command."
+        ]
+    },
+    {
+        "cell_type": "code",
+        "execution_count": None,
+        "metadata": {},
+        "outputs": [],
+        "source": [
+            "# Pair plot across 4 key continuous metrics, colored by grade category\n",
+            "pair_cols = ['study_hours_weekly', 'midterm_score', 'final_score', 'attendance_rate', 'grade']\n",
+            "g = sns.pairplot(df[pair_cols], hue='grade', palette='tab10', diag_kind='kde', plot_kws=dict(alpha=0.7, s=35))\n",
+            "g.fig.suptitle('Pair Plot: Exploring Multivariate Relationships by Grade', y=1.02, fontsize=14, fontweight='bold')\n",
+            "plt.show()"
+        ]
+    },
+    {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+            "### 💬 Analytic Discussion 5: Reading the Multivariate Landscape\n",
+            "\n",
+            "**Questions for the Class:**\n",
+            "1. Look down the **diagonal**: What do the diagonal plots show? *(They show the univariate distribution for each feature, split by Grade A, B, C, D, F)*.\n",
+            "2. Notice how Grade 'A' students (blue) and Grade 'F' students (brown/red) form **distinct separated clusters** in the `study_hours_weekly` vs `final_score` plot, but **overlap heavily** on `attendance_rate`.\n",
+            "3. What does this tell you about which feature is a stronger discriminator of performance?"
+        ]
+    },
+    {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+            "---\n",
+            "## 8. Geographic Pattern: Regional Comparison (Mock Choropleth / Map)\n",
+            "\n",
+            "**Purpose**: Explore spatial differences across regions or states."
+        ]
+    },
+    {
+        "cell_type": "code",
+        "execution_count": None,
+        "metadata": {},
+        "outputs": [],
+        "source": [
+            "# Regional aggregation: Student count and average score by state\n",
+            "state_stats = df.groupby('state_region').agg(\n",
+            "    student_count=('student_id', 'count'),\n",
+            "    avg_score=('final_score', 'mean'),\n",
+            "    avg_study=('study_hours_weekly', 'mean')\n",
+            ").reset_index()\n",
+            "\n",
+            "fig, ax = plt.subplots(figsize=(9, 4.5))\n",
+            "\n",
+            "# Lollipop chart for clean geographic/state comparison\n",
+            "state_stats = state_stats.sort_values(by='avg_score')\n",
+            "ax.hlines(y=state_stats['state_region'], xmin=60, xmax=state_stats['avg_score'], color='#2b83ba', alpha=0.7, linewidth=3)\n",
+            "scatter = ax.scatter(state_stats['avg_score'], state_stats['state_region'], s=state_stats['student_count']*8, \n",
+            "                     c=state_stats['avg_score'], cmap='viridis', edgecolors='black', linewidth=1.5, zorder=3)\n",
+            "\n",
+            "# Add data labels\n",
+            "for idx, row in state_stats.iterrows():\n",
+            "    ax.text(row['avg_score'] + 0.8, row['state_region'], f\"{row['avg_score']:.1f} pts (n={row['student_count']})\", va='center', fontweight='semibold')\n",
+            "\n",
+            "ax.set_xlim(60, 90)\n",
+            "ax.set_title('Regional Performance: Average Final Score by State (Bubble Size = Student Count)', fontweight='bold', pad=12)\n",
+            "ax.set_xlabel('Average Final Exam Score')\n",
+            "ax.set_ylabel('State Region')\n",
+            "plt.colorbar(scatter, label='Score Scale')\n",
+            "plt.tight_layout()\n",
+            "plt.show()"
+        ]
+    },
+    {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+            "---\n",
+            "## 🎯 Summary: The Chart Selection Decision Matrix\n",
+            "\n",
+            "Whenever you have a question about your data, use this cheat sheet to pick the exact chart:\n",
+            "\n",
+            "| Analytical Question | Data Types Involved | Recommended Visualization |\n",
+            "|---|---|---|\n",
+            "| **Distribution** | 1 Continuous variable | **Histogram** (spread), **KDE** (shape), **Boxplot** (outliers) |\n",
+            "| **Comparison** | 1 Categorical + 1 Continuous | **Bar Chart** (`bar` or `barh`), Grouped Bar |\n",
+            "| **Relationship** | 2 Continuous variables | **Scatter Plot** (optionally with `hue` or `size`) |\n",
+            "| **Time Trend** | Date/Time + Continuous | **Line Chart** (with markers and shaded event bands) |\n",
+            "| **Composition** | Parts of a 100% total | **Stacked Bar Chart** (preferred) or 2-slice Pie Chart |\n",
+            "| **Correlation** | Many Continuous variables | **Correlation Heatmap** (`sns.heatmap`) |\n",
+            "| **Multiple Variables** | 3 to 6 Continuous variables | **Pair Plot** (`sns.pairplot`) |\n",
+            "| **Geographic** | Location + Metric | **Choropleth Map** or Ranked Lollipop Chart |"
+        ]
+    }
+]
+
+notebook = {
+    "cells": cells,
+    "metadata": {
+        "language_info": {
+            "name": "python"
+        }
+    },
+    "nbformat": 4,
+    "nbformat_minor": 2
+}
+
+with open("class_02_data_visualization_intro/data_visualization_intro.ipynb", "w", encoding="utf-8") as f:
+    json.dump(notebook, f, indent=1)
+
+print("Created class_02_data_visualization_intro/data_visualization_intro.ipynb successfully!")
