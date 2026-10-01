@@ -69,3 +69,10 @@ pip install -r requirements.txt
   - **Relationship & Correlation**: Scatter plots with regression lines and correlation heatmaps
   - **Multivariate**: Pair plots (`sns.pairplot`)
   - **Geographic Pattern**: Regional ranking & lollipop charts
+
+### [Class 03: EDA Deep Dive (online)](class_03_eda_deep_dive/)
+- **Distributions & Shape**: bimodal, skewed, hidden mixtures
+- **Anomalies**: data-quality audit, sentinels, missingness patterns, outlier vs error
+- **Relationships & Correlation**: heatmaps, causation vs association, non-linear patterns
+- **Grouping**: `groupby`, Simpson's paradox, confounding
+- **Format**: Colab notebooks, solo Data Detective task, 5 team missions with pitches
