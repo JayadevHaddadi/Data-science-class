@@ -76,3 +76,8 @@ pip install -r requirements.txt
 - **Relationships & Correlation**: heatmaps, causation vs association, non-linear patterns
 - **Grouping**: `groupby`, Simpson's paradox, confounding
 - **Format**: Colab notebooks, solo Data Detective task, 5 team missions with pitches
+
+### [Class 04: Probability Foundations + AI-Assisted Problem Solving](class_04_probability_foundations/)
+- **Probability**: concepts, conditional probability, independence, Bayes' theorem
+- **Random variables & distributions**: expected value, variance, Binomial, Poisson, Normal, CLT
+- **AI workflow**: Understand → Prompt → Run → Verify → Reflect; 3 live demo tasks + 3 student tasks
