@@ -52,3 +52,62 @@
 1. Pick a winner: "the team that tied their chart to a decision."
 2. Four laws of EDA: **look first · outlier ≠ error · correlation isn't causation · always ask 'who are the groups?'**
 3. "Nobody pays you to write `sns.histplot`. They pay you to find what's weird and tell humans what to do."
+
+---
+
+# ❓ Question Bank: ask after each pitch (pick 3–4 per team)
+
+Order: **Check** (do they understand their own chart?) → **Challenge** (alternative explanations) → **Decide** (stakeholder pushback) → **Extend** (what would you do next?). Aim the Check questions at the *non-spokesperson* so the whole team has to understand it.
+
+## 🛌 Team 1: Sleep Cliff
+- **Check:** "Where exactly does the curve bend? Show me the sleep band where scores start to drop." *(~6 h; below 5.5 h is worst)*
+- **Check:** "What did you try as a threshold? Did 5, 6 and 7 hours give different answers?" *(6 separates best; 7 dilutes the gap)*
+- **Challenge:** "The correlation is only 0.18. Why should the Health Director care?" *(r = straight-line fit; the damage sits in one group, ~22 % of students)*
+- **Challenge:** "Could heavy job hours cause both short sleep and low scores?" *(job >15 h sleep ≈ 6.2 h; yes, a confounder)*
+- **Decide:** "Short sleepers average ~5 points lower. Is that worth a campaign for 22 % of students?"
+- **Extend:** "Is it sleep *causing* low scores, or is a stressed student sleeping badly *and* studying badly? How would you test it?" *(experiment / track same students over time)*
+
+## 😰 Team 2: Stress Sweet Spot
+- **Check:** "Why did you use a curved fit instead of a straight line? What does the straight line miss?"
+- **Check:** "At what stress score is average performance highest, and where does it fall off?" *(peak ≈5–6; falls above ~8)*
+- **Challenge:** "How many students are in your lowest stress band? Can you trust that average?" *(n ≈ 16; no)*
+- **Challenge:** "Does your chart prove stress *causes* lower scores at the high end?" *(no: poor scorers may become stressed: reverse causation)*
+- **Decide:** "So should the university try to *reduce everyone's stress to zero*?" *(no, moderate is fine; target ≥ 8)*
+- **Extend:** "Would you expect the same curve for every program? How would you check?" *(colour/facet by program)*
+
+## 💼 Team 3: Working Student
+- **Check:** "Is the harm from having a job at all, or from working too many hours? Which numbers show that?" *(none 67 vs 9–15 h 66 vs >15 h 58)*
+- **Check:** "How did you choose your bucket boundaries? What happens if you move them?"
+- **Challenge:** "Did you check the pattern *within* each program, or could one hard program explain it?" *(pivot: holds in all four)*
+- **Challenge:** "What else do heavy workers lack that could explain the lower scores?" *(sleep: 6.2 vs 6.9 h)*
+- **Decide:** "Many students need the money. Is a 15-hour cap fair? What would you say to a student working 20 h?"
+- **Extend:** "55 % of students don't work at all. How does that spike change how you'd report the *average* job hours?" *(mean ≈ 6.8 describes nobody)*
+
+## ☕ Team 4: Coffee Myth
+- **Check:** "What happened to the trend line when you coloured by program?" *(flat inside each program)*
+- **Check:** "Which program drinks the most coffee, and which scores lowest? Is that a coincidence?" *(Engineering ≈ 2.9 cups, ≈ 55)*
+- **Challenge:** "You found no effect inside programs. Does that prove coffee is harmless?" *(no, observational; only shows no evidence of harm)*
+- **Challenge:** "Name another situation from today where an overall trend flipped inside the groups." *(Simpson's: study hours)*
+- **Decide:** "Café manager: do I keep selling espresso? Should the Wellness Office run a coffee campaign?"
+- **Extend:** "What data would you need to claim coffee *does* affect scores?" *(randomised trial, or the same students over time, control for sleep and program)*
+
+## 🕳️ Team 5: Who Didn't Answer?
+- **Check:** "Are the missing sleep answers random? Show me the evidence." *(≈3 % no job vs 15–19 % working students)*
+- **Check:** "Which of the four extreme students did you keep, and what evidence did you use?" *(stress 9.6 + plausible scores; three similar cases)*
+- **Challenge:** "Why not fill the blanks with the average sleep?" *(hides bias; shrinks variance; invents data)*
+- **Challenge:** "In which direction does the missing data bias our sleep results?" *(busy students missing → sleep looks better than reality)*
+- **Decide:** "Survey Office: I need one number for the board. What do I say average sleep is?"
+- **Extend:** "How would you change the survey form to prevent this?" *(optional-question reminders, shorter form, daytime reminders)*
+
+---
+
+## 🎯 Whole-class questions (ask when a team finishes)
+1. "Hands up if you **agree** with this team's recommendation. Hands up if you'd **want more evidence**." *(then ask one of the doubters why)*
+2. "Which *one* number or chart convinced you most?"
+3. "What would **change your mind**?"
+4. "Did any team's finding connect to another team's?" *(Team 1 ↔ 3 via sleep; Team 4 ↔ live Simpson; Team 5 ↔ Team 1 via who is missing from sleep data)*
+
+## 🔧 If a team gives a weak answer
+- "Show me the chart *you* made, not the starter one."
+- "What did you try that **didn't** work?" *(tests whether they explored or copied)*
+- "Explain it to someone who doesn't know what a correlation is."
