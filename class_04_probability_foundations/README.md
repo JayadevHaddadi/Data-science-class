@@ -12,6 +12,8 @@
 | `02_STUDENT_ai_demo_followalong.ipynb` | students | Workflow + tasks, AI-log template |
 | `03_STUDENT_ai_tasks.ipynb` | students | **3 tasks they solve with AI** (spam filter, casino game, exam curve). Deliberately *no* pre-built code: only hints, empty cells, and an AI log |
 | `03_INSTRUCTOR_ai_tasks_solutions.ipynb` | **you** | Solutions, likely AI traps, rubric, spot-check questions |
+| `04_STUDENT_group_presentations.ipynb` | students | 5 groups x 5-minute presentations, one concept each (conditional probability, independence, Bayes, random variables, distributions) |
+| `04_INSTRUCTOR_group_presentations.ipynb` | **you** | Same + what a strong talk contains, mistakes to listen for, questions to ask |
 | `CLASS_LESSON_PLAN.md` | **you** | Suggested timeline and logistics |
 
 Rebuild everything: `cd scripts && python create_class4_notebooks.py` (reuses `nbtools.py` from Class 03). Edit the script, not the `.ipynb` files.
@@ -19,3 +21,5 @@ Rebuild everything: `cd scripts && python create_class4_notebooks.py` (reuses `n
 ## 🧭 Design notes
 * Student task notebook follows the Class 03 feedback: *little pre-built*, students write the code, verification is mandatory and graded.
 * The AI-demo notebook intentionally contains **no fake AI transcripts**: you run the prompts live with whichever AI you use, and verification cells hold the ground truth. Each task targets a real, common AI failure: base rates (Task 1), off-by-one ≥ vs > and distribution choice (Task 2), pattern-matching the famous problem instead of reading it (Task 3).
+
+Group-presentation notebooks are built by `scripts/create_group_presentations.py`.
