@@ -384,13 +384,40 @@ fig, axes = plt.subplots(1, 3, figsize=(12, 3.2), sharex=True)
 for ax, size in zip(axes, [1, 5, 30]):
     means = rng.exponential(1.0, size=(20_000, size)).mean(axis=1)
     ax.hist(means, bins=50, color="steelblue", density=True)
-    ax.set_title(f"average of {size} draw{'s' if size > 1 else ''}")
+    ax.axvline(1, color="crimson", ls="--", label="true mean = 1")
+    ax.set_title(f"average of {size} draw{'s' if size > 1 else ''}\\nSD of the values = {means.std():.2f}")
+    ax.set_xlabel("value of the average")
+axes[0].set_ylabel("density (area = 1)")
+axes[0].legend()
 axes[0].set_xlim(0, 4)
-fig.suptitle("Central Limit Theorem: averages become bell-shaped", y=1.03)
+fig.suptitle("Central Limit Theorem: same centre, narrower and more bell-shaped", y=1.08)
 plt.show()
 '''),
     note("""
 🎤 SAY: "No matter how weird the original distribution, the **average** of many independent draws is approximately Normal. That's why the bell curve is the default for sample means — and why statistics works."
+"""),
+    md("### 6.5 *Why* it happens: many more ways to reach the middle (dice)"),
+    code('''
+fig, axes = plt.subplots(1, 4, figsize=(13, 3), sharex=True)
+for ax, k in zip(axes, [1, 2, 5, 30]):
+    avgs = rng.integers(1, 7, size=(50_000, k)).mean(axis=1)
+    ax.hist(avgs, bins=np.linspace(1, 6, 36), color="darkorange", density=True)
+    ax.axvline(3.5, color="crimson", ls="--")
+    ax.set_title(f"average of {k} dice"); ax.set_xlabel("value of the average")
+axes[0].set_ylabel("density")
+fig.suptitle("Dice: flat for 1 die, bell-shaped for many (red line = true mean 3.5)", y=1.08)
+plt.show()
+
+# how many ways to get the LOWEST total vs the MOST COMMON total?
+ways = np.ones(6)
+for k in range(1, 6):
+    if k > 1:
+        ways = np.convolve(ways, np.ones(6))
+    print(f"{k} dice: {6**k:>5} equally likely outcomes | ways to get the lowest total: {int(ways[0])} "
+          f"| ways to get the most common total: {int(ways.max())}")
+'''),
+    note("""
+🎤 SAY: "One die is flat — every value has exactly 1 way. With 5 dice there are 7,776 outcomes: **1** way to get all ones, but **780** ways to get the most common total. That pile-up of ways in the middle IS the bell curve. Averaging cancels ups and downs, so the middle wins."
 """),
     md("""
 ### Cheat-sheet: which distribution?
