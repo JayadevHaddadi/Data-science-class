@@ -7,6 +7,8 @@
 | File | Who | Purpose |
 |---|---|---|
 | `slides/Class04_Probability_Foundations.pptx` | **you** | 19-slide instructor deck with speaker notes on every slide (timing, predict questions, what to cut). Built by `scripts/build_deck.py` |
+| `PRESENTER_GUIDE.md` | **you** | Slide-by-slide: what to show, what to say, what to ask, and what to cut |
+| `slides/Class04_Whiteboard_Venn.pptx` | **you** | 6 Venn-diagram / maths slides to show or redraw on the whiteboard. Built by `scripts/build_whiteboard_deck.py` |
 | `01_INSTRUCTOR_concepts.ipynb` | **you** | Screen-share demo of all 6 topics, notes + pacing inside, pre-rendered |
 | `01_STUDENT_concepts.ipynb` | students | Same code with predict boxes, no notes |
 | `02_INSTRUCTOR_ai_demo.ipynb` | **you** | You solve **3 tasks live with AI** (Bayes, Poisson, Monty Hall twist) showing weak vs strong prompts and verification |
