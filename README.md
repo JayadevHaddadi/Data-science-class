@@ -81,3 +81,9 @@ pip install -r requirements.txt
 - **Probability**: concepts, conditional probability, independence, Bayes' theorem
 - **Random variables & distributions**: expected value, variance, Binomial, Poisson, Normal, CLT
 - **AI workflow**: Understand → Prompt → Run → Verify → Reflect; 3 live demo tasks + 3 student tasks
+
+### [Class 05: Statistical Inference](class_05_statistical_inference/)
+- **Samples & sampling distributions**: parameter vs statistic, bias, standard error
+- **Estimation**: confidence intervals and what "95%" means
+- **Testing**: hypotheses, p-values, Type I/II errors, effect sizes (Cohen's d)
+- **Format**: 16-slide instructor deck + a 5-group activity notebook
