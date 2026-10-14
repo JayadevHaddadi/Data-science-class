@@ -8,6 +8,7 @@ Everything uses one idea: treat the **518 exam scores** of the Class 03 campus s
 | Path | Who | Purpose |
 |---|---|---|
 | `slides/Class05_Statistical_Inference.pptx` | **you** | 16-slide instructor deck, speaker notes on every slide (timing, what to say, questions to ask) |
+| `slides/Class05_Whiteboard_Pictures.pptx` | **you** | 8 picture slides to show or redraw on the whiteboard: circles-in-circles, biased vs random dots, narrow vs wide bells, nets, tail areas, a Venn of the two error types, overlapping bells for effect size. Built by `scripts/build_whiteboard_deck.py` |
 | `notebooks/05_STUDENT_group_activity.ipynb` | students | 5 groups, task + data + hints only. Students write the code themselves |
 | `notebooks/05_INSTRUCTOR_group_activity.ipynb` | **you** | Same + worked solutions (pre-rendered) and questions to ask each group |
 | `scripts/build_deck.py` | | Builds the deck (python-pptx). All numbers are computed from the data |
