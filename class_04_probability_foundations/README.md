@@ -6,6 +6,7 @@
 ## 📂 Notebooks (`notebooks/`)
 | File | Who | Purpose |
 |---|---|---|
+| `slides/Class04_Probability_Foundations.pptx` | **you** | 19-slide instructor deck with speaker notes on every slide (timing, predict questions, what to cut). Built by `scripts/build_deck.py` |
 | `01_INSTRUCTOR_concepts.ipynb` | **you** | Screen-share demo of all 6 topics, notes + pacing inside, pre-rendered |
 | `01_STUDENT_concepts.ipynb` | students | Same code with predict boxes, no notes |
 | `02_INSTRUCTOR_ai_demo.ipynb` | **you** | You solve **3 tasks live with AI** (Bayes, Poisson, Monty Hall twist) showing weak vs strong prompts and verification |
